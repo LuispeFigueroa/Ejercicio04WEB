@@ -1,0 +1,100 @@
+.searchbar {
+    display: flex;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1.5px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    width: 100%;
+}
+
+.searchbar:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.searchbar--large {
+    border-width: 2px;
+    box-shadow: 0 8px 32px var(--shadow-lg);
+}
+
+.searchbar__icon {
+    display: flex;
+    align-items: center;
+    padding: 0 16px 0 20px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.searchbar--large .searchbar__icon {
+    padding: 0 18px 0 24px;
+}
+
+.searchbar__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 1rem;
+    padding: 14px 8px 14px 0;
+}
+
+.searchbar--large .searchbar__input {
+    font-size: 1.1rem;
+    padding: 18px 8px 18px 0;
+}
+
+.searchbar__input::placeholder {
+    color: var(--text-muted);
+}
+
+.searchbar__input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.searchbar__btn {
+    flex-shrink: 0;
+    margin: 6px;
+    padding: 10px 22px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    border-radius: 999px;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.searchbar--large .searchbar__btn {
+    margin: 8px;
+    padding: 14px 28px;
+    font-size: 1rem;
+}
+
+.searchbar__btn:hover:not(:disabled) {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.searchbar__btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.searchbar__spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+}
