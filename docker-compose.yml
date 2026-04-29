@@ -1,0 +1,9 @@
+services:
+  onta:
+    build:
+      context: .
+      args:
+        VITE_TMDB_API_KEY: ${VITE_TMDB_API_KEY}
+    ports:
+      - "8080:80"
+    restart: unless-stopped
