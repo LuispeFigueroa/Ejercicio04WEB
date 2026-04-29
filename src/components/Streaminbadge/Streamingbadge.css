@@ -1,0 +1,47 @@
+.streaming-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--platform-color);
+    color: var(--platform-text);
+    transition: transform var(--transition);
+}
+
+.streaming-badge:hover {
+    transform: scale(1.05);
+}
+
+.streaming-badge--sm {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+}
+
+.streaming-badge--md {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+}
+
+.streaming-badge--lg {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+}
+
+.streaming-badge__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.streaming-badge__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.6rem;
+    text-align: center;
+    padding: 4px;
+    line-height: 1.2;
+}
