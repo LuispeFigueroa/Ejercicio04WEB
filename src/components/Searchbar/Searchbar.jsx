@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import './SearchBar.css'
+import './Searchbar.css'
 
 /**
  * SearchBar — barra de búsqueda principal de Onta.

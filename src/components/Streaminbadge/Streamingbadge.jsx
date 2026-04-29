@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import { getPlatformInfo } from '../data/platforms'
-import './StreamingBadge.css'
+import { getPlatformInfo } from '../../data/platforms'
+import './Streamingbadge.css'
 
 /**
  * StreamingBadge — son las muestras de cada plataforma de streaming, obtiene los datos del mapeo que de plataforams con ids en platforms.js

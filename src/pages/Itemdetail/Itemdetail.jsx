@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import StreamingBadge from '../components/StreamingBadge'
-import { useApp } from '../context/AppContext'
-import { getMovieById, getWatchProviders, getBackdropUrl, getPosterUrl } from '../services/tmdb'
-import './ItemDetail.css'
+import StreamingBadge from '../../components/Streaminbadge/Streamingbadge'
+import { useApp } from '../../context/AppContext'
+import { getMovieById, getWatchProviders, getBackdropUrl, getPosterUrl } from '../../services/tmdb'
+import './Itemdetail.css'
 
 export default function ItemDetail() {
     const { id } = useParams()

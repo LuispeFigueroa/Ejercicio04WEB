@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useContext, useState, useEffect } from 'react'
 export const AppContext = createContext()
 export function AppProvider({ children }) {
     const [theme, setTheme] = useState(() => localStorage.getItem('onta-theme') || 'dark')
@@ -19,3 +19,4 @@ export function AppProvider({ children }) {
     )
 }
 
+export const useApp = () => useContext(AppContext)

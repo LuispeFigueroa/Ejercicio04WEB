@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import SearchBar from '../components/SearchBar'
-import StreamingBadge from '../components/StreamingBadge'
+import SearchBar from '../../components/Searchbar/Searchbar'
+import StreamingBadge from '../../components/Streaminbadge/Streamingbadge'
 import { searchMovies, getWatchProviders, getPosterUrl } from '../../services/tmdb'
 import './Home.css'
 

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import MovieCard from '../components/MovieCard'
-import { getPopularMovies } from '../services/tmdb'
-import './Items.css'
+import MovieCard from '../../components/MovieCard/Moviecard'
+import { getPopularMovies } from '../../services/tmdb'
+import './items.css'
 
 export default function Items() {
     const [movies, setMovies] = useState([])

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import MovieCard from '../components/MovieCard'
-import { useApp } from '../context/AppContext'
+import MovieCard from '../../components/MovieCard/Moviecard'
+import { useApp } from '../../context/AppContext'
 import './Favoritos.css'
 
 export default function Favoritos() {
