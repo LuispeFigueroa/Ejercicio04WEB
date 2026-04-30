@@ -87,7 +87,7 @@ Tarjeta de película con póster, rating, año y botón de favorito.
 | `showFavoriteBtn` | `bool` | ❌ | Muestra botón de favorito (default: `true`) |
 
 ### `<SearchBar />`
-Barra de búsqueda principal con botón "¿Onta?".
+Barra de búsqueda principal.
 
 | Prop | Tipo | Requerida | Descripción |
 |------|------|-----------|-------------|
@@ -97,7 +97,7 @@ Barra de búsqueda principal con botón "¿Onta?".
 | `size` | `'default' \| 'large'` | ❌ | Tamaño visual |
 
 ### `<StreamingBadge />`
-Badge visual que muestra una plataforma de streaming con su logo y color.
+Badge/icono v que muestra una plataforma de streaming con su logo y color.
 
 | Prop | Tipo | Requerida | Descripción |
 |------|------|-----------|-------------|
