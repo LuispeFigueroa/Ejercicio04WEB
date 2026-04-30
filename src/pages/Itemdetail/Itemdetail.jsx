@@ -185,11 +185,6 @@ export default function ItemDetail() {
                                 </div>
                             )}
 
-                            {providers?.link && (
-                                <a href={providers.link} target="_blank" rel="noopener noreferrer" className="detail__tmdb-link">
-                                    Ver opciones completas en TMDB ↗
-                                </a>
-                            )}
                         </div>
                     </div>
                 </div>

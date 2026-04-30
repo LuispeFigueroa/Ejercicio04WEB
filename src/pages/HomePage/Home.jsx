@@ -163,16 +163,6 @@ export default function Home() {
                                 </div>
                             )}
 
-                            {providers?.link && (
-                                <a
-                                    href={providers.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="home__providers-link"
-                                >
-                                    Ver más opciones en TMDB ↗
-                                </a>
-                            )}
                         </div>
 
                         {/* Otros resultados */}

@@ -54,14 +54,14 @@ No necesitás configurar ninguna variable de entorno, el proyecto corre directam
 src/
 ├── components/
 │   ├── MovieCard/
-│   │   ├── MovieCard.jsx       # Tarjeta reutilizable de película
-│   │   └── MovieCard.css
-│   ├── SearchBar/
-│   │   ├── SearchBar.jsx       # Barra de búsqueda principal
-│   │   └── SearchBar.css
-│   ├── StreamingBadge/
-│   │   ├── StreamingBadge.jsx  # Badge de plataforma de streaming
-│   │   └── StreamingBadge.css
+│   │   ├── Moviecard.jsx       # Tarjeta reutilizable de película
+│   │   └── Moviecard.css
+│   ├── Searchbar/
+│   │   ├── Searchbar.jsx       # Barra de búsqueda principal
+│   │   └── Searchbar.css
+│   ├── Streaminbadge/
+│   │   ├── Streamingbadge.jsx  # Badge de plataforma de streaming
+│   │   └── Streamingbadge.css
 │   ├── Navbar/
 │   │   ├── Navbar.jsx
 │   │   └── Navbar.css
@@ -71,10 +71,14 @@ src/
 ├── context/
 │   └── AppContext.jsx          # Estado global: tema + favoritos
 ├── pages/
-│   ├── Home.jsx                # / — búsqueda + tendencias de la semana
-│   ├── Items.jsx               # /items — listado de populares
-│   ├── ItemDetail.jsx          # /items/:id — detalle completo
-│   └── Favoritos.jsx           # /favoritos — películas guardadas
+│   ├── HomePage/
+│   │   └── Home.jsx            # / — búsqueda + tendencias de la semana
+│   ├── Items/
+│   │   └── Items.jsx           # /items — listado de populares
+│   ├── Itemdetail/
+│   │   └── Itemdetail.jsx      # /items/:id — detalle completo
+│   └── Favoritos/
+│       └── Favoritos.jsx       # /favoritos — películas guardadas
 ├── services/
 │   └── tmdb.js                 # Todas las llamadas a TMDB API
 └── data/
