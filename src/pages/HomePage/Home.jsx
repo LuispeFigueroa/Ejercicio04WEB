@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import SearchBar from '../../components/Searchbar/Searchbar'
 import StreamingBadge from '../../components/Streaminbadge/Streamingbadge'
-import { searchMovies, getWatchProviders, getPosterUrl } from '../../services/tmdb'
+import MovieCard from '../../components/MovieCard/Moviecard'
+import { searchMovies, getWatchProviders, getPosterUrl, getTrendingMovies } from '../../services/tmdb'
 import './Home.css'
 
 export default function Home() {
@@ -11,6 +12,16 @@ export default function Home() {
     const [error, setError] = useState(null)
     const [searchedMovie, setSearchedMovie] = useState(null)
     const [providers, setProviders] = useState(null)
+
+    const [trending, setTrending] = useState([])
+    const [trendingLoading, setTrendingLoading] = useState(true)
+
+    useEffect(() => {
+        getTrendingMovies()
+            .then(data => setTrending(data.results || []))
+            .catch(() => { })
+            .finally(() => setTrendingLoading(false))
+    }, [])
 
     const handleSearch = async (query) => {
         setLoading(true)
@@ -27,12 +38,10 @@ export default function Home() {
                 return
             }
 
-            // Tomar el resultado más relevante
             const top = data.results[0]
             setSearchedMovie(top)
             setResults(data.results.slice(0, 5))
 
-            // Buscar proveedores de streaming para ese resultado
             const prov = await getWatchProviders(top.id)
             setProviders(prov)
         } catch (err) {
@@ -47,7 +56,6 @@ export default function Home() {
         ? [...(providers.flatrate || []), ...(providers.free || [])]
         : []
 
-    // Deduplicar por provider_id
     const uniqueProviders = allProviders.filter(
         (p, i, arr) => arr.findIndex(x => x.provider_id === p.provider_id) === i
     )
@@ -72,7 +80,7 @@ export default function Home() {
                         <div className="home__search-wrap">
                             <SearchBar
                                 onSearch={handleSearch}
-                                placeholder="Ej: Inception, El Padrino, Coco..."
+                                placeholder="Ej: Inception, El Padrino, Star Wars..."
                                 isLoading={loading}
                                 size="large"
                             />
@@ -196,6 +204,36 @@ export default function Home() {
                     </div>
                 )}
             </section>
+
+            {/* Trending */}
+            {results === null && (
+                <section className="home__trending">
+                    <div className="container">
+                        <div className="home__trending-header">
+                            <h2 className="home__trending-title">Populares de la semana</h2>
+                            <Link to="/items" className="home__trending-link">Ve más películas</Link>
+                        </div>
+                        {trendingLoading ? (
+                            <div className="home__trending-grid">
+                                {Array.from({ length: 10 }).map((_, i) => (
+                                    <div key={i} className="home__trending-skeleton">
+                                        <div className="skeleton home__trending-skeleton-poster" />
+                                        <div className="skeleton home__trending-skeleton-title" />
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="home__trending-grid">
+                                {trending.map((movie, i) => (
+                                    <div key={movie.id} style={{ animationDelay: `${i * 0.05}s` }}>
+                                        <MovieCard movie={movie} />
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </section>
+            )}
         </main>
     )
 }
