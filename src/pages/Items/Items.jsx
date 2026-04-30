@@ -49,7 +49,7 @@ export default function Items() {
                             aria-label="Filtrar películas"
                         />
                         <button className="items__random-btn" onClick={handleRandom} disabled={loading}>
-                            🎲 Película aleatoria
+                            Película aleatoria
                         </button>
                     </div>
                 </div>

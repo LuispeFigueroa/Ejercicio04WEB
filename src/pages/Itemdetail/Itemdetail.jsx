@@ -146,8 +146,8 @@ export default function ItemDetail() {
                         <div className="detail__streaming">
                             <h2 className="detail__streaming-title">
                                 {streamingProviders.length > 0
-                                    ? '📺 Disponible en streaming'
-                                    : '🔍 No está en streaming actualmente'}
+                                    ? 'Disponible en streaming'
+                                    : 'No está en streaming actualmente'}
                             </h2>
 
                             {streamingProviders.length > 0 && (

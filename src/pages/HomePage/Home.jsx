@@ -66,7 +66,7 @@ export default function Home() {
             <section className="home__hero">
                 <div className="container">
                     <div className="home__hero-content">
-                        <p className="home__eyebrow">El buscador de streaming</p>
+                        <p className="home__eyebrow">Encuentra tu proxima pelicula</p>
                         <h1 className="home__title">
                             ¿Onta
                             <br />
@@ -74,7 +74,7 @@ export default function Home() {
                         </h1>
                         <p className="home__subtitle">
                             Escribe el nombre de cualquier película y te decimos
-                            en qué plataformas de streaming la podés ver.
+                            en dónde la podés ver.
                         </p>
 
                         <div className="home__search-wrap">
@@ -98,13 +98,12 @@ export default function Home() {
             <section className="home__results container">
                 {error && (
                     <div className="home__error" role="alert">
-                        <span>⚠</span> {error}
+                        {error}
                     </div>
                 )}
 
                 {results !== null && results.length === 0 && !loading && (
                     <div className="home__empty">
-                        <p className="home__empty-icon">🎬</p>
                         <p>No encontramos esa película. Intentá con otro nombre.</p>
                     </div>
                 )}
@@ -144,8 +143,8 @@ export default function Home() {
                         <div className="home__providers">
                             <h3 className="home__providers-title">
                                 {uniqueProviders.length > 0
-                                    ? '📺 Disponible en:'
-                                    : '😔 No está en streaming por ahora'}
+                                    ? 'Disponible en:'
+                                    : 'No está en streaming por ahora'}
                             </h3>
 
                             {uniqueProviders.length > 0 && (
