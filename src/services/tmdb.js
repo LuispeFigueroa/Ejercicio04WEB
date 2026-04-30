@@ -1,6 +1,6 @@
 
 //llamadas de la API de TMDB 
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY || 'fb9f712ebbb379604dbfd83181750483'
 const BASE_URL = 'https://api.themoviedb.org/3'
 const IMAGE_BASE = 'https://image.tmdb.org/t/p'
 
