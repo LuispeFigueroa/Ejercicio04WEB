@@ -2,7 +2,9 @@
 
 Mini-blog de películas construido con **Vite + React + React Router v6**.
 
-Blog de peliculas que utiliza la API de TMDB para mostrar información de películas y series. Con un buscador principal que te permite ver en que plataforma se encuentra la pelicula
+Blog de peliculas que utiliza la API de TMDB para mostrar información de películas y series. Con un buscador principal que te permite ver en que plataforma se encuentra la pelicula.
+
+⚠️NOTA: el readme y algunas partes de la documentcion fueron asisitidas por IA. 
 
 > **Nivel apuntado: Senior — 100 pts**
 
