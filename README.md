@@ -15,6 +15,9 @@ Blog de peliculas que utiliza la API de TMDB para mostrar información de pelíc
 La API key de TMDB está incluida directamente en el código **únicamente con fines de evaluación**, para que el proyecto pueda correrse sin configuración adicional. Si no fuera un ejercicio, la clave no estaria hardcodeada, sino que se manejaria en un .env, ademas de agregar un .gitignore para que no se suba al repositorio.
 
 ---
+##Demo
+El video del ejercicio y sus rutas funcionado se puede encontrar dentro del readme en la carpeta /demo o desde aqui: https://youtu.be/EvPWLY84OAk 
+---
 
 ##  Instruccion para correr el proyecto
 
