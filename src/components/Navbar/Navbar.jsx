@@ -13,7 +13,7 @@ export default function Navbar() {
             <div className="container navbar__inner">
                 <Link to="/" className="navbar__logo">
                     <span className="navbar__logo-text">Onta</span>
-                    <span className="navbar__logo-dot">.</span>
+                    <span className="navbar__logo-question_mark">?</span>
                 </Link>
 
                 <nav className="navbar__nav">

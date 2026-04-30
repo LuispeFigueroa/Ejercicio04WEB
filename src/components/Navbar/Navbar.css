@@ -26,7 +26,7 @@
     color: var(--text-primary);
 }
 
-.navbar__logo-dot {
+.navbar__logo-question_mark {
     color: var(--accent);
 }
 
