@@ -12,7 +12,7 @@ Blog de peliculas que utiliza la API de TMDB para mostrar información de pelíc
 
 ##  Nota sobre la API Key
 
-La API key de TMDB está incluida directamente en el código **únicamente con fines de evaluación**, para que el proyecto pueda correrse sin configuración adicional. Si no fuera un ejercicio, la clave no estaria hardcodeada, sino que se manejaria en un .env, ademas de agregar un .gitignore para que no se suba al repositorio.
+La API key de TMDB está incluida directamente en el código **únicamente con fines de evaluación**, para que el proyecto pueda correrse sin configuración adicional.
 
 ---
 ##Demo
@@ -44,7 +44,7 @@ npm install
 npm run dev
 ```
 
-No necesitás configurar ninguna variable de entorno, el proyecto corre directamente.
+No necesitás ninguna configuración adicional, el proyecto corre directamente.
 
 ---
 
@@ -72,17 +72,24 @@ src/
 │   └── AppContext.jsx          # Estado global: tema + favoritos
 ├── pages/
 │   ├── HomePage/
-│   │   └── Home.jsx            # / — búsqueda + tendencias de la semana
+│   │   ├── Home.jsx            # / — búsqueda + tendencias de la semana
+│   │   └── Home.css
 │   ├── Items/
-│   │   └── Items.jsx           # /items — listado de populares
+│   │   ├── Items.jsx           # /items — listado de populares
+│   │   └── items.css
 │   ├── Itemdetail/
-│   │   └── Itemdetail.jsx      # /items/:id — detalle completo
+│   │   ├── Itemdetail.jsx      # /items/:id — detalle completo
+│   │   └── Itemdetail.css
 │   └── Favoritos/
-│       └── Favoritos.jsx       # /favoritos — películas guardadas
+│       ├── Favoritos.jsx       # /favoritos — películas guardadas
+│       └── Favoritos.css
 ├── services/
 │   └── tmdb.js                 # Todas las llamadas a TMDB API
-└── data/
-    └── platforms.js            # Datos estáticos de plataformas de streaming
+├── data/
+│   └── platforms.js            # Datos estáticos de plataformas de streaming
+├── App.jsx                     # Rutas principales
+├── main.jsx                    # Punto de entrada
+└── index.css                   # Estilos globales y variables de tema
 ```
 
 ---
